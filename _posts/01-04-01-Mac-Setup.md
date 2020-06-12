@@ -1,4 +1,5 @@
 ---
+title:   การเซ็ตอัปบนแมค
 isChild: true
 anchor:  mac_setup
 ---

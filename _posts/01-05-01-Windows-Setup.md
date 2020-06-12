@@ -1,4 +1,5 @@
 ---
+title:   การเซ็ตอัปบนวินโดวส์
 isChild: true
 anchor:  windows_setup
 ---
