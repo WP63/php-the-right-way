@@ -3,21 +3,19 @@ isChild: true
 anchor:  programming_paradigms
 ---
 
-## Programming Paradigms {#programming_paradigms_title}
+## กระบวนทางโปรแกรม {#programming_paradigms_title}
 
-PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over
-the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in
-PHP 5.3 (2009), and traits in PHP 5.4 (2012).
+PHP เป็นภาษาที่ยืดหยุ่น  สามารถใช้ในการเขียนโค้ดได้ในหลายรูปแบบ  และมีการพัฒนาปรับปรุงอย่างต่อเนื่องในทุกๆ ปี  สิ่งหนึ่งที่เห็นได้ชัดนั่นคือการรองรับการเขียนโปรแกรมในเชิงวัตถุอย่างเต็มรูปแบบเข้ามาใน PHP 5.0 (2004), การรองรับ anonymous function และ namespace ใน PHP 5.3, และการรองรับ trait ใน PHP 5.4 (2012)
 
-### Object-oriented Programming
+### การเขียนโปรแกรมเชิงวัตถุ
 
 PHP has a very complete set of object-oriented programming features including support for classes, abstract classes,
 interfaces, inheritance, constructors, cloning, exceptions, and more.
 
-* [Read about Object-oriented PHP][oop]
-* [Read about Traits][traits]
+* [อ่านเกี่ยวกับ Object-oriented PHP][oop]
+* [อ่านเกี่ยวกับ Traits][traits]
 
-### Functional Programming
+### การเขียนโปรแกรมเชิงฟังก์ชัน
 
 PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and
 built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
@@ -31,23 +29,23 @@ New anonymous functions (with support for closures) are present since PHP 5.3 (2
 PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
 can be used interchangeably with anonymous functions in almost all cases.
 
-* Continue reading on [Functional Programming in PHP](/pages/Functional-Programming.html)
-* [Read about Anonymous Functions][anonymous-functions]
-* [Read about the Closure class][closure-class]
-* [More details in the Closures RFC][closures-rfc]
-* [Read about Callables][callables]
-* [Read about dynamically invoking functions with `call_user_func_array()`][call-user-func-array]
+* Continue reading on [Functional Programming in PHP](pages/Functional-Programming.html)
+* [อ่านเกี่ยวกับ Anonymous Functions][anonymous-functions]
+* [อ่านเกี่ยวกับ the Closure class][closure-class]
+* [รายละเอียดเพิ่มเติมใน Closures RFC][closures-rfc]
+* [อ่านเกี่ยวกับ Callables][callables]
+* [อ่านเกี่ยวกับ dynamically invoking functions with `call_user_func_array()`][call-user-func-array]
 
-### Meta Programming
+### เมทาโปรแกรมมิ่ง
 
 PHP supports various forms of meta-programming through mechanisms like the Reflection API and Magic Methods. There are
 many Magic Methods available like `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. that allow
 developers to hook into class behavior. Ruby developers often say that PHP is lacking `method_missing`, but it is
 available as `__call()` and `__callStatic()`.
 
-* [Read about Magic Methods][magic-methods]
-* [Read about Reflection][reflection]
-* [Read about Overloading][overloading]
+* [อ่านเกี่ยวกับ Magic Methods][magic-methods]
+* [อ่านเกี่ยวกับ Reflection][reflection]
+* [อ่านเกี่ยวกับ Overloading][overloading]
 
 
 [oop]: https://secure.php.net/language.oop5
