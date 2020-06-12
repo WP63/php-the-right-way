@@ -2,6 +2,7 @@ baseurl: https://wp63.github.io/php-the-right-way/
 highlighter: rouge
 markdown: kramdown
 permalink: date
+timezone: Asia/Bangkok
 maruku:
     use_tex:    false
     use_divs:   false
