@@ -1,61 +1,46 @@
 ---
+title:  มาตรฐานการเขียนโค้ด
 anchor: code_style_guide
 ---
 
-# Code Style Guide {#code_style_guide_title}
+# มาตรฐานการเขียนโค้ด {#code_style_guide_title}
 
-The PHP community is large and diverse, composed of innumerable libraries, frameworks, and components. It is common for
-PHP developers to choose several of these and combine them into a single project. It is important that PHP code adhere
-(as close as possible) to a common code style to make it easy for developers to mix and match various libraries for
-their projects.
+PHP มีชุมชนผู้ใช้ขาดใหญ่และหลากหลาย  เต็มไปด้วยไลบรารี่, เฟรมเวิร์ก, และคอมโพเนนท์ต่างๆ จำนวนมาก  ซึ่งเป็นเรื่องปกติที่นักพัฒนาภาษา PHP จะเลือกใช้โค้ดต่างๆ จากตรงนี้และประกอบมันขึ้นมาเป็นโปรเจ็กท์สักโปรเจ็กท์หนึ่ง  นั่นทำให้รูปแบบการเขียนโค้ดของนักพัฬนาแต่ละคนนั้นควรจะใกล้เคียงกันเป็นมาตรฐานให้มากที่สุด  เพื่อให้นักพัฒนาคนอื่นสามารถอ่านและนำโค้ดไปใช้ในโปรเจ็กท์ของพวกเขาได้ไม่ยากเย็นนัก
 
-The [Framework Interop Group][fig] has proposed and approved a series of style recommendations. Not all of them related
-to code-style, but those that do are [PSR-1][psr1], [PSR-12][psr12] and [PSR-4][psr4]. These
-recommendations are merely a set of rules that many projects like Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK,
-FuelPHP, Lithium, etc are adopting. You can use them for your own projects, or continue to use your own
-personal style.
+กลุ่ม [Framework Interop Group][fig] ได้เสนอและแนะนำเกณฑ์กลางเกี่ยวกับ PHP แม้ว่าจะไม่ใช่เรื่องของการเขียนโค้ดทั้งหมด (บางเรื่องเกี่ยวกับโครงสร้างของคลาสบางประเภท และอื่นๆ) แต่หัวข้ออย่าง [PSR-1][psr1], [PSR-12][psr12], และ [PSR-4][psr4] นั้นเกี่ยวกับการเขียนโค้ดโดยตรง  คำแนะนำเหล่านี้จะเป็นเกณฑ์การเขียนโค้ด  ซึ่งโครงการจำนวนมากเช่น Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium, และอื่นๆ ได้นำไปปรับใช้แล้ว  ทั้งนี้คุณอาจจะนำไปปรับใช้กับโปรเจ็กท์ของคุณ  หรืออาจจะใช้รูปแบบของคุณเองก็ได้
 
-Ideally, you should write PHP code that adheres to a known standard. This could be any combination of PSRs, or one
-of the coding standards made by PEAR or Zend. This means other developers can easily read and work with your code, and
-applications that implement the components can have consistency even when working with lots of third-party code.
+แต่จริงๆ แล้วคุณควรจะเขียนโค้ดโดยอ้างอิงกับมาตรฐานที่เป็นที่รับรู้กัน  ซึ่งอาจจะเป็นมาตรฐาน PSR ต่างๆ, หรืออาจจะเป็นมาตรฐานโค้ดที่แนะนำโดย PEAR หรือ Zend ก็ได้  ซึ่งการเขียนโค้ดโดยอิงกับมาตรฐานเหล่านีั้จะช่วยให้นักพัฒนาคนอื่น (โดยเฉพาะคนที่รับงานของคุณไปทำต่อ) สามารถอ่านและเข้าใจโค้ดของคุณได้ง่ายขึ้น  รวมการันตีได้ว่าแอปพลิเคชันอื่นๆ ที่เรียกใช้โค้ดของคุณ  จะรูปแบบโค้ดที่เข้ากันได้กับไลบรารี่อื่นๆ ที่ใช้งาน
 
-* [Read about PSR-1][psr1]
-* [Read about PSR-12][psr12]
-* [Read about PSR-4][psr4]
-* [Read about PEAR Coding Standards][pear-cs]
-* [Read about Symfony Coding Standards][symfony-cs]
+* [อ่านเกี่ยวกับ PSR-1][psr1]
+* [อ่านเกี่ยวกับ PSR-12][psr12]
+* [อ่านเกี่ยวกับ PSR-4][psr4]
+* [อ่านเกี่ยวกับ PEAR Coding Standards][pear-cs]
+* [อ่านเกี่ยวกับ Symfony Coding Standards][symfony-cs]
 
-You can use [PHP_CodeSniffer][phpcs] to check code against any one of these recommendations, and plugins for text
-editors like [Sublime Text][st-cs] to be given real-time feedback.
+คุณสามารถใช้ [PHP_CodeSniffer][phpcs] เพื่อตรวจสอบดูว่าโค้ดใดๆ ของคุณนั้นเขียนได้ถูกต้องตามหลักมาตรฐานเหล่านี้หรือไม่  Text Editor หลายๆ ตัวอย่าง [Sublime Text][st-cs] และ [Visual Studio Code][vsc-cs] นั้นมีส่วนเสริมที่ช่วยตรวจสอบโค้ดแบบเรียลไทม์
 
-You can fix the code layout automatically by using one of the following tools:
+นอกจากนี้คุณยังสามารถใช้เครื่องมือเหล่านี้ในการตรวจสอบและแก้ไขโค้ดบางอย่างได้อัตโนมัติ:
 
-- One is the [PHP Coding Standards Fixer][phpcsfixer] which has a very well tested codebase.
-- Also, the [PHP Code Beautifier and Fixer][phpcbf] tool which is included with PHP_CodeSniffer can be used to adjust your code accordingly.
+- ตัวเลือกแรกคือ [PHP Coding Standards Fixer][phpcsfixer] ซึ่งเป็นโครงการที่ได้รับการทดสอบมาแล้วอย่างดี
+- และอีกตัวเลือกคือ [PHP Code Beautifier and Fixer][phpcbf] ซึ่งเป็นเครื่องมือที่มาพร้อมกับ PHP_CodeSniffer ที่สามารถใช้ปรับโค้ดของคุณให้ถูกต้องได้
 
-And you can run phpcs manually from shell:
+หรือคุณอาจจะรันคำสั่งนี้เองใน command line ก็ได้:
 
     phpcs -sw --standard=PSR1 file.php
 
-It will show errors and describe how to fix them.
-It can also be helpful to include this command in a git hook.
-That way, branches which contain violations against the chosen standard cannot enter the repository until those
-violations have been fixed.
+คำสั่งนี้จะแสดงข้อผิดพลาดและคำแนะนำในการแก้ไข  และผู้ใช้ที่ git อาจจะพ่วงคีำสั่งนี้เข้าไปใน git hook เพื่อใช้ตรวจสอบโค้ดก่อนการคอมมิตได้ด้วยเช่นกัน
 
-If you have PHP_CodeSniffer, then you can fix the code layout problems reported by it, automatically, with the
-[PHP Code Beautifier and Fixer][phpcbf].
+เมื่อคุณติดตั้ง PHP_CodeSniffer แล้ว  คุณยังสามารถใช้คำสั่งนี้เพื่อให้ [PHP Code Beautifier and Fixer][phpcbf] ทำการแก้ไขข้อผิดพลาดให้โดยอัตโนมัติ
 
     phpcbf -w --standard=PSR1 file.php
 
-Another option is to use the [PHP Coding Standards Fixer][phpcsfixer].
-It will show which kind of errors the code structure had before it fixed them.
+อีกทางเลือกนั่นคือใช้ [PHP Coding Standards Fixer][phpcsfixer] ในการแก้ไข  โดยเครื่องมือตัวนี้จะแสดงข้อผิดพลาดก่อนการแก้ไขให้ด้วย
 
     php-cs-fixer fix -v --rules=@PSR1 file.php
 
-English is preferred for all symbol names and code infrastructure. Comments may be written in any language easily
-readable by all current and future parties who may be working on the codebase.
+เราแนะนำให้ใช้ภาษาอังกฤษเป็นหลักในการตั้งชื่อซิมโบลและไฟล์ต่างๆ  แต่คุณสามารถเขียนคอมเมนต์ด้วยภาษาใดก็ได้  หากคุณมั่นใจว่าคนที่จะนำโค้ดของคุณไปใช้สามารถอ่านมันออก
 
-Finally, a good supplementary resource for writing clean PHP code is [Clean Code PHP][cleancode].
+และสุดท้าย  เราแนะนำให้ลองดูตัวอย่างใน repo นี้ว่าโค้ดที่สะอาดนั้นเป็นอย่างไร [Clean Code PHP][cleancode].
 
 [fig]: https://www.php-fig.org/
 [psr1]: https://www.php-fig.org/psr/psr-1/
@@ -66,5 +51,6 @@ Finally, a good supplementary resource for writing clean PHP code is [Clean Code
 [phpcs]: https://pear.php.net/package/PHP_CodeSniffer/
 [phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
+[vsc-cs]: https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs
 [phpcsfixer]: https://cs.sensiolabs.org/
 [cleancode]: https://github.com/jupeter/clean-code-php
