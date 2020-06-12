@@ -1,18 +1,18 @@
 ---
-title:   Common Directory Structure
+title:   โครงสร้างโฟลเดอร์
 isChild: true
 anchor:  common_directory_structure
 ---
 
-## Common Directory structure {#common_directory_structure_title}
+## โครงสร้างโฟลเดอร์ {#common_directory_structure_title}
 
-A common question among those starting out with writing programs for the web is, "where do I put my stuff?" Over the years, this answer has consistently been "where the `DocumentRoot` is." Although this answer is not complete, it's a great place to start.
+คำถามสามัญประจำบ้านสำหรับผู้ที่เริ่มเขียนโค้ดนั้นคือ "ฉันจะเอาไฟล์ต่างๆ ไปใส่ไว้โฟลเดอร์ไหนดี?" คำตอบแบบง่ายๆ ของคำถามที่นี่เราตอบกันมาตลอดนั่นคือ "เอาไปวางไว้ที่ `DocumentRoot` ของเซิร์ฟเวอร์" อย่างไรก็ดีนี่ยังไม่ใช่คำตอบที่สมบูรณ์นัก  แต่ก็เป็นจุดเริ่มต้นที่ดี
 
-For security reasons, configuration files should not be accessible by a site's visitors; therefore, public scripts are kept in a public directory and private configurations and data are kept outside of that directory.
+ในแง่ของความปลอดภัยแล้ว  ไฟล์ตั้งค่าต่างๆ นั้นไม่ควรที่จะสามารถเข้าถึงได้โดยผู้เข้าเว็บ  ดังนั้นแล้วสคริปท์แบบ public ต่างๆ จะเก็บเอาไว้ในไดเรคทอรี่ที่เปิดให้เข้าถึงได้ (public directory) ในขณะที่ไฟล์ตั้งค่าต่างๆ จะเก็บเอาไว้นอกไดเรคทอรี่นั้น
 
-For each team, CMS, or framework one works in, a standard directory structure is used by each of those entities. However, if one is starting a project alone, knowing which filesystem structure to use can be daunting.
+สำหรับแต่ละทึม, แต่ละ CMS, หรือแต่ฃะเฟรมเวิร์ก  อาจจะมีโครงสร้างไดเรคทอรีั่ต่างกันออกไปและไม่ยากนักที่จะทำตามโครงสร้างที่มีอยู่แล้ว  อย่างไรตามหากเราเริ่มโปรเจ็กท์ใหม่ขึ้นมาเอง  อาจจะเป็นเรื่องน่าปวดหัวสักหน่อยว่าเราจะจัดโครงสร้างไดเรคทอรี่ต่างๆ อย่างไรดี
 
-[Paul M. Jones] has done some fantastic research into common practices of tens of thousands of github projects in the realm of PHP. He has compiled a standard file and directory structure, the [Standard PHP Package Skeleton], based on this research. In this directory structure, `DocumentRoot` should point to `public/`, unit tests should be in the `tests/` directory, and third party libraries, as installed by [composer], belong in the `vendor/` directory. For other files and directories, abiding by the [Standard PHP Package Skeleton] will make the most sense to contributors of a project.
+[Paul M. Jones] ได้ทำวิเคราะห์ common practice ที่กว่าหมื่นโปรเจ็กท์ภาษา PHP บน GutHub ใช้งาน  และได้สรุปโครงสร้างไดเรคทอรี่สำหรับโปรเจ็กท์ standalone ในแบบที่ควรเป็นออกมาในบทความ [Standard PHP Package Skeleton] ซึ่งจากโครงสร้างที่ Paul ได้สรุปออกมานั้น ไดเรคทอรี่ `DocumentRoot` ควรจะชี้ไปที่ไดเรคทอรี่ `public/` ของโปรเจ็กท์, ไฟล์ unit test ควรจะอยู่ในไดเรคทอรี่ `tests/` และแพ็คเกจ 3rd-party ที่ติดตั้งผ่าน [composer] จะอยู่ใน `vendor/` ส่วนโครงสร้างไฟล์และไดเรคทอรี่อื่นๆ นั้นควรยึดตามในบทความ [Standard PHP Package Skeleton]
 
 [Paul M. Jones]: http://paul-m-jones.com/
 [Standard PHP Package Skeleton]: https://github.com/php-pds/skeleton
