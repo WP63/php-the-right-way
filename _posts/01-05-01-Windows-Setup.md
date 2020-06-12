@@ -3,25 +3,19 @@ isChild: true
 anchor:  windows_setup
 ---
 
-## Windows Setup {#windows_setup_title}
+## การเซ็ตอัปบนวินโดวส์ {#windows_setup_title}
 
-You can download the binaries from [windows.php.net/download][php-downloads]. After the extraction of PHP, it is recommended to set the [PATH][windows-path] to the root of your PHP folder (where php.exe is located) so you can execute PHP from anywhere.
+คุณสามารถดาวน์โหลดไฟล์ไบนารีจาก [windows.php.net/download][php-downloads] และหลังจากแตกไฟล์ออกมาแล้ว  เราแนะนำให้ทำการตั้งค่า [PATH][windows-path] ให้ชี้มายังโฟลเดอร์ PHP ที่เพิ่งแตกออกมา (ที่ที่เก็บไฟล์ php.exe) ซึ่งจะช่วยให้คุณสามารถเรียกใช้งาน PHP ผ่าน command line ได้จากทุกที่
 
-For learning and local development, you can use the built in webserver with PHP 5.4+ so you don't need to worry about
-configuring it. If you would like an "all-in-one" which includes a full-blown webserver and MySQL too then tools such
-as the [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] and [WAMP][wamp] will
-help get a Windows development environment up and running fast. That said, these tools will be a little different from
-production so be careful of environment differences if you are working on Windows and deploying to Linux.
+สำหรับผู้เริ่มเรียนรู้  หรือการพัฒนาเว็บบนเครื่องตัวเอง  คุณสามารถใช้เซิร์ฟเวอร์ built-in ที่มากับ PHP 5.4 เป็นต้นมา  หรือหากคุณต้องการตัวเลือกแบบ "all-in-one" ที่จะมาพร้อมกับเว็บเซอร์เวอร์และระบบฐานข้อมูลเช่น MySQL คุณสามารถติดตั้งซอฟต์แวร์เหล่านี้ได้เช่น [Web Platform Installer][wpi], [XAMPP][xampp], [EasyPHP][easyphp], [OpenServer][openserver] หรือ [WAMP][wamp] อย่างไรก็ตาม  การตั้งค่าในซอฟต์แวร์เหล่านี้มักจะต่างกันกับบนเซิร์ฟเวอร์ production จริง  ดังนั้นในการพัฒนาก็ควรคำนึกถึงความแตกต่างของเครื่องพัฒนาและเซิร์ฟเวอร์จริงที่มักเป็นระบบปฏิบัติการลินิกซ์ด้วย
 
-If you need to run your production system on Windows, then IIS7 will give you the most stable and best performance. You
-can use [phpmanager][phpmanager] (a GUI plugin for IIS7) to make configuring and managing PHP simple. IIS7 comes with
-FastCGI built in and ready to go, you just need to configure PHP as a handler. For support and additional resources
-there is a [dedicated area on iis.net][php-iis] for PHP.
+ถ้าหากคุณดีพลอยแอปพลิเคชัน PHP ไปยังเซิร์ฟเวอร์ที่เป็นระบบปฏิบัติการวินโดส์ IIS7 จะเป็นตัวเลือกที่เสถียรและมีประสิทธิภาพที่สุด  คุณสามารถใช้ [phpmanager][phpmanager] ซึ่งเป็นปลั๊กอินแบบ GUI ของ IIS7 ในการช่วยตั้งค่าและจัดการ PHP
 
-Generally running your application on different environment in development and production can lead to strange bugs popping up when you go
-live. If you are developing on Windows and deploying to Linux (or anything non-Windows) then you should consider using a [Virtual Machine](/#virtualization_title).
+IIS7 นั้นมาพร้อมกับ FastCGI ในตัว  ที่คุณต้องทำนั้นมีเพียงแค่ตั้งค่าให้ PHP มาเป็น handler เท่านั้น  สำหรับความช่วยเหลือและข้อมูลอื่นๆ สามารถอ่านได้จาก[หมวด PHP บน iis.net][php-iis]
 
-Chris Tankersley has a very helpful blog post on what tools he uses to do [PHP development using Windows][windows-tools].
+โดยปกติแล้วการรันแอปพลิเคชันบนสภาพแวดล้อมที่ต่างกันระหว่างเครื่องพัฒนาและเซิร์ฟเวอร์จริงมักจะทำให้เปิดบั๊กแปลกๆ อยู่เสมอ  ดังนั้นหากคุณพัฒนาบนระบบปฏิบัติการวินโดวส์และดีพลอยขึ้นเซิร์ฟเวอร์ที่ใช้ระบบปฏิบัติการลินิกซ์ (หรือระบบอื่นๆ ที่ไม่ใช่วินโดวส์) คุณอาจจะเลือกใช้ Virtual Machine ในการพัฒนาแทน
+
+Chris Tankersley ได้เขียนบล็อกเกี่ยวกับเครื่องมือที่เขาใช้ในการพัฒนา PHP บนวินโดวส์เอาไว้ [PHP development using Windows][windows-tools].
 
 [easyphp]: http://www.easyphp.org/
 [phpmanager]: http://phpmanager.codeplex.com/

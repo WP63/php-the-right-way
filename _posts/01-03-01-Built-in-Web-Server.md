@@ -1,19 +1,18 @@
 ---
-title:   Built-in Web Server
+title:   เว็บเซิร์ฟเวอร์แบบ Built-in
 isChild: true
 anchor:  builtin_web_server
 ---
 
-## Built-in web server {#builtin_web_server_title}
+## เว็บเซิร์ฟเวอร์แบบ Built-in {#builtin_web_server_title}
 
-With PHP 5.4 or newer, you can start learning PHP without installing and configuring a full-fledged web server.
-To start the server, run the following command from your terminal in your project's web root:
+ตั้งแต่ PHP 5.4 เป็นต้นมา  คุณสามารถเริ่มต้นเรียนรู้ PHP ได้ง่ายๆ โดยไม่ต้องติดตั้งซอฟต์แวร์จำลองเซิร์ฟเวอร์ใดๆ ในการเริ่มใช้งานเซิร์ฟเวอร์ built-in ของ PHP ให้รันคำสั่งนี้บน command prompt หรือ terminal จากโฟลเดอร์โปรเจ็กท์ของคุณ
 
 {% highlight console %}
 > php -S localhost:8000
 {% endhighlight %}
 
-* [Learn about the built-in, command line web server][cli-server]
+* [เรียนรู้เพิ่มเติมเกี่ยวกับเซิร์ฟเวอร์ built-in][cli-server]
 
 
 [cli-server]: http://php.net/features.commandline.webserver
