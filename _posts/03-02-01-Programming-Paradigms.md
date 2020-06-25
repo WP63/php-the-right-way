@@ -18,19 +18,15 @@ interfaces, inheritance, constructors, cloning, exceptions, and more.
 
 ### การเขียนโปรแกรมเชิงฟังก์ชัน
 
-PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and
-built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
-other functions (a feature called _Higher-order Functions_) and functions can return other functions.
+PHP รองรับ first-class functions นั่นคือคุณสามารถกำหนดค่าของตัวแปรต่างๆ เป็นฟังก์ชันได้  ทั้งฟังก์ชันที่มากับ PHP และฟังก์ชันที่ผู้ใช้เขียนเองสามารถถูกเรียกได้ผ่านตัวแปรและจะถูก invoke ขึ้นมาแบบ dynamic และเรายังสามารถส่งฟังก์ชันเข้าไปเป็นอาร์กิวเมนต์ของฟังก์ชันอื่นได้ด้วย (หรือที่เรียกว่า _Higher-order functions_) รวมถึงฟังก์ชันต่างๆ สามารถคืนค่ากลับออกมาเป็นฟังก์ชันได้ด้วยเช่นกัน
 
-Recursion, a feature that allows a function to call itself, is supported by the language, but most PHP code
-is focused on iteration.
+นอกจากนี้ PHP ยังรองรับฟังก์ชันแบบ recursion หรือฟังก์ชันที่เรียกใช้ตัวมันเองด้วย  แต่โค้ด PHP ส่วนมากจะใช้แบบ iteration เสียมากกว่า
 
-New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
+ใน PHP 5.3 (ออกเมื่อปี 2009) PHP ยังรองรับ anomymouse ฟังก์ชัน รวมถึงคลาส closure
 
-PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
-can be used interchangeably with anonymous functions in almost all cases.
+ใน PHP 5.4 ได้มีการเพิ่มความสามารถในการ bind closures เข้ากับสโคปของออพเจ็กท์  และปรับปรุง callables ให้สามารถใช้แทนกันกับ anonymouse functions ในสถานการณ์ส่วนใหญ่ได้ด้วย
 
-* Continue reading on [Functional Programming in PHP](pages/Functional-Programming.html)
+* อ่านเพิ่มเติมเกี่ยวกับ [Functional Programming in PHP](pages/Functional-Programming.html)
 * [อ่านเกี่ยวกับ Anonymous Functions][anonymous-functions]
 * [อ่านเกี่ยวกับ the Closure class][closure-class]
 * [รายละเอียดเพิ่มเติมใน Closures RFC][closures-rfc]
@@ -39,10 +35,9 @@ can be used interchangeably with anonymous functions in almost all cases.
 
 ### เมทาโปรแกรมมิ่ง
 
-PHP supports various forms of meta-programming through mechanisms like the Reflection API and Magic Methods. There are
-many Magic Methods available like `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. that allow
-developers to hook into class behavior. Ruby developers often say that PHP is lacking `method_missing`, but it is
-available as `__call()` and `__callStatic()`.
+PHP รองรับ meta-programming ผ่านฟีเจอร์อย่าง Reflection API และ Magic Methods และ PHP นั้นมี Magic Methods อยู่หลายตัวเช่น `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, และอื่นๆ  ซึ่ง Magic Methods เหล่านี้เปิดให้นักพัฒนาสามารถฮุคเข้าไปในการทำงานต่างๆ ของคลาสได้
+
+นักพัฒนาภาษา Ruby มักบอกว่าภาษา PHP นั้นขาดฟีเจอร์อย่าง `method_missing` ที่จะทำงานเมื่อมีการเรียกใช้เมท็อดที่ไม่มีอยู่หรือเข้าถึงไม่ได้  แต่จริงๆ PHP รองรับฟีเจอร์นี้ผ่าน Magic Methods `__call()` และ `__callStatic()`
 
 * [อ่านเกี่ยวกับ Magic Methods][magic-methods]
 * [อ่านเกี่ยวกับ Reflection][reflection]
