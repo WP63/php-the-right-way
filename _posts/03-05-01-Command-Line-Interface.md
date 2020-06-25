@@ -1,28 +1,26 @@
 ---
+title: การใช้งานผ่านคอมมานด์ไลน์
 isChild: true
 anchor:  command_line_interface
 ---
 
-## Command Line Interface {#command_line_interface_title}
+## การใช้งานผ่านคอมมานด์ไลน์ {#command_line_interface_title}
 
-PHP was created to write web applications, but is also useful for scripting command line interface (CLI) programs.
-Command line PHP programs can help automate common tasks like testing, deployment, and application administration.
+แม้ PHP จะถูกสร้างขึ้นมาเพื่อใช้เขียนเว็บแอปพลิเคชัน  แต่ PHP ยังสามารถใช้เขียนสคริปท์ที่ทำงานบน command-line interface (CLI) ได้ด้วย  ซึ่งโปรแกรม PHP ที่ทำงานผ่านคอมมานด์ไลน์นั้นสามารถใช้ในงาน automation ต่างๆ เช่นการทำเทสต์, การดีพลอย, และการจัดการแอปพลิเคชัน
 
-CLI PHP programs are powerful because you can use your app's code directly without having to create and secure a web
-GUI for it. Just be sure **not** to put your CLI PHP scripts in your public web root!
+โปรแกรม PHP ผ่าน CLI นั้นค่อนข้างอิสระ  เพราะคุณสามารถเขียนโค้ดของคุณให้ทำงานได้โดยตรงโดยไม่จำเป็นต้องทำส่วนติดต่อผู้ใช้ผ่านหน้าเว็บ  แต่ให้ระลึกไว้เสมอว่าอย่าเอาสคริปท์ PHP สำหรับ CLI ไปวางไว้บน public directory บนเซิร์ฟเวอร์ของคุณ!
 
-Try running PHP from your command line:
+ลองรันโค้ด PHP จากคอมมานด์ไลน์ของคุณ:
 
 {% highlight console %}
 > php -i
 {% endhighlight %}
 
-The `-i` option will print your PHP configuration just like the [`phpinfo()`][phpinfo] function.
+ออพชัน `-i` จะแสดงการตั้งค่าของ PHP เหมือในฟังก์ชัน [`phpinfo()`][phpinfo]
 
-The `-a` option provides an interactive shell, similar to ruby's IRB or python's interactive shell. There are a number
-of other useful [command line options][cli-options], too.
+ออพชัน `-a` จะเป็นการเปิดใช้่ interactive shell ในลักษณะเดียวกันกับ IRB ของ Ruby หรือ interactive shell ของ Python และยังมี[ออพชันคอมมานด์ไลน์][cli-options]อื่นๆ อีกมากมาย
 
-Let's write a simple "Hello, $name" CLI program. To try it out, create a file named `hello.php`, as below.
+ลองเขียนแอปพลิเคชัน "Hello, $name" ง่ายๆ บน CLI โดยการสร้างไฟล์ `hello.php` ด้วยโค้ดนี้
 
 {% highlight php %}
 <?php
@@ -51,7 +49,7 @@ Hello, world
 {% endhighlight %}
 
 
- * [Learn about running PHP from the command line][php-cli]
+ * [อ่านเพิ่มเติมเกี่ยวกับการใช้งาน PHP ผ่านคอมมานด์ไลน์][php-cli]
 
 [phpinfo]: https://secure.php.net/function.phpinfo
 [cli-options]: https://secure.php.net/features.commandline.options
